@@ -8,6 +8,8 @@
 	unstage = reset HEAD --
 	co = checkout
 	st = status
+	br = branch
+	cm = commit
 
 [pull]
 	rebase = true
