@@ -21,7 +21,7 @@ window-padding-x = 2
 
 alpha-blending = native
 
-shell-integration-features = ssh-env
+shell-integration-features = ssh-env,no-cursor
 
 window-height = 32
 window-width = 120
