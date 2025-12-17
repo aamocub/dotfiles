@@ -1,0 +1,37 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/aamocub/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+font-family = Comic Code
+font-size = 14
+window-padding-x = 2
+
+alpha-blending = native
+
+shell-integration-features = ssh-env
+
+cursor-style = block
+cursor-style-blink = false
+cursor-click-to-move = true
+
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+
+mouse-hide-while-typing = true
+
+background-opacity = 0.9
+
+theme = Desert

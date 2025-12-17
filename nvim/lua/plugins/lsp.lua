@@ -18,6 +18,20 @@ vim.keymap.set({ "n" }, "<leader>lM", "<cmd>Mason<cr>")
 -- Lua LSP setup
 vim.lsp.enable({ "lua_ls" })
 
+local function setkeymaps()
+	if package.loaded["fzf-lua"] then
+		vim.keymap.set({ "n" }, "<leader>lr", "<cmd>FzfLua lsp_references<cr>", { desc = "LSP references" })
+		vim.keymap.set({ "n" }, "<leader>ld", "<cmd>FzfLua lsp_definitions<cr>", { desc = "LSP definitions" })
+	else
+		vim.keymap.set({ "n" }, "<leader>lr", function()
+			vim.lsp.buf.references()
+		end, { desc = "LSP references" })
+		vim.keymap.set({ "n" }, "<leader>ld", function()
+			vim.lsp.buf.definition()
+		end, { desc = "LSP definitions" })
+	end
+end
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -30,7 +44,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 					vim.lsp.inlay_hint.enable(vim.lsp.inlay_hint.is_enabled())
 				end)
 			end
+			if client:supports_method("textDocument/hover") then
+				vim.keymap.set("n", "K", function()
+					vim.lsp.buf.hover()
+				end)
+			end
 		end
-		vim.keymap.set("i", "<c-space>", vim.lsp.completion.get)
+		setkeymaps()
 	end,
 })

@@ -1,0 +1,22 @@
+[core]
+	editor = nvim
+
+[user]
+	name = Alfonso Amorós Cubells
+	email = aamocub@gmail.com
+[alias]
+	unstage = reset HEAD --
+	co = checkout
+	st = status
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[init]
+	defaultBranch = main
+
+[format]
+	signOff = true

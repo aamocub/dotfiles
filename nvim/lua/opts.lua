@@ -24,6 +24,7 @@ vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
+vim.opt.wildignore:append({ ".DS_Store" })
 
 -- Visual settings
 vim.opt.signcolumn = "yes"
@@ -32,6 +33,7 @@ vim.opt.showmatch = true
 vim.opt.cmdheight = 2
 vim.opt.completeopt = "menu,menuone,noinsert,noselect,fuzzy,popup"
 vim.opt.pumheight = 10
+vim.opt.pumborder = "rounded"
 vim.opt.pumblend = 10
 vim.opt.winblend = 10
 vim.opt.conceallevel = 0
@@ -52,6 +54,9 @@ vim.opt.iskeyword:append("-")
 vim.opt.path:append("**")
 vim.opt.selection = "exclusive"
 vim.opt.mouse = "a"
+vim.opt.updatetime = 300
+vim.opt.timeoutlen = 500
+vim.opt.ttimeoutlen = 10
 
 -- Cursor settings
 -- vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
