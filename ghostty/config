@@ -23,6 +23,9 @@ alpha-blending = native
 
 shell-integration-features = ssh-env
 
+window-height = 32
+window-width = 120
+
 cursor-style = block
 cursor-style-blink = false
 cursor-click-to-move = true
@@ -31,6 +34,12 @@ copy-on-select = clipboard
 clipboard-trim-trailing-spaces = true
 
 mouse-hide-while-typing = true
+
+keybind = super+j=previous_tab
+keybind = super+k=next_tab
+
+macos-auto-secure-input = true
+macos-secure-input-indication = true
 
 background-opacity = 0.9
 
