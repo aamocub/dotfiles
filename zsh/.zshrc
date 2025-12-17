@@ -9,14 +9,16 @@ setopt LIST_PACKED
 setopt ALWAYS_TO_END
 setopt AUTO_PARAM_SLASH
 setopt GLOB_COMPLETE
+setopt SHARE_HISTORY
 
 ## Autocompletion
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
+	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
+
+autoload -Uz compinit
+compinit
+
 _comp_options+=(globdots)
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' completer _extensions _complete _approximate
@@ -41,9 +43,11 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' formats ' (git:%b) '
 export PS1='%n@%m:%~${vcs_info_msg_0_}# '
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 export PATH="/opt/riscv32/bin:$PATH"
-export PATH="/Users/aamocub/Desktop/personal/verilator/bin:$PATH"
-export MANPATH="$MANPATH:/opt/homebrew/opt/erlang/lib/erlang/man"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if type brew &>/dev/null; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+	export MANPATH="$MANPATH:/opt/homebrew/opt/erlang/lib/erlang/man"
+	export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+	export PATH="/Users/aamocub/Desktop/personal/verilator/bin:$PATH"
+fi
