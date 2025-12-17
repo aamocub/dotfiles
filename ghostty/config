@@ -27,7 +27,7 @@ window-height = 32
 window-width = 120
 
 cursor-style = block
-cursor-style-blink = false
+cursor-style-blink = true
 cursor-click-to-move = true
 
 copy-on-select = clipboard
