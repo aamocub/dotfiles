@@ -1,0 +1,192 @@
+xcode-select --install
+mkdir -p .config .local/share .local/state .cache
+vim .zprofile
+echo $HOME
+nvim .zshenv
+ls -al
+mkdir .config/zsh
+mv .zprofile .zsh_* .config/zsh
+rm -rf .zsh_*
+ls -la
+rm ./Library/Application\ Support/com.mitchellh.ghostty/config
+mkdir .config/ghostty
+brew install tree-sitter-cli
+ls /opt/homebrew/share/zsh/site-functions
+brew install node
+brew install lua-language-server
+brew install verilator
+brew install llvm
+brew remove llvm
+mkdir .config/npm
+vi .config/npm/npmrc
+clang --version
+clangd --version
+vi .config/ghostty
+vi .config/ghostty/config
+mkdir personal
+cd personal
+mkdir arv
+mkdir .config/git
+git config --global user.name "Alfonso Amorós Cubells"
+vi .config/git/config
+ssh-keygen -t ed25519 -C "alfonso.alfurtx@gmail.com"
+eval "$(ssh-agent -s)"
+vi ~/.ssh/config
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+rmdir arv
+git clone git@github.com:aamocub/arv.git
+rm REGISTER.sv
+celar
+mkdir rtl sim syn bench doc
+cd rtl
+git register.sv
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.unstage 'reset HEAD --'
+git add .
+git ci -m
+git ci
+git push
+vi ~/.config/ghostty/config
+vi rtl/register.sv
+cd Documents/Libros/Procesadores
+curl -o modern-processor-design-supercalar-processors.pdf 'https://acs.pub.ro/~cpop/SMPA/Modern%20Processor%20Design_%20Fundamentals%20of%20Superscalar%20Processors%20(%20PDFDrive%20).pdf'
+open modern-processor-design-supercalar-processors.pdf
+cd .config/nvim/init.lua
+mkdir lsp
+vi lsp/clangd.lua
+rm lsp/lua_ls.lua
+vi lsp/lua_ls.lua
+mv lsp/lua_ls.lua lsp/luals.lua
+vi lsp/luals.lua
+chmod +x create-filelist.sh
+touch rtl/arv.sv
+vi create-filelist.sh
+./create-filelist.sh
+cat verible.filelist
+vi rtl/arv
+rm rtl/arv
+mkdir .svlangserver
+vi .gitignore
+rm verible.filelist
+rm create-filelist.sh
+svlangserver
+brew tap chipsalliance/verible && brew install verible
+brew install ripgrep
+rm .viminfo
+npm install -g @imc-trading/svlangserver
+cd .config/nvim
+mkdir snippets
+vi snippets/systemverilog.json
+~/.local/share/npm/bin/svlangserver --version
+vi ~/.zshenv
+npm list
+npm root -g
+~/.local/share/npm/lib/node_modules/@imc-trading/svlangserver/bin/main.js
+htop
+top
+svlangserver --version
+vi
+vi test.sv
+rm -rf ~/.config/nvim/snippets
+ls .svlangserver
+l .svlangserver
+npm help
+npm uninstall -g @imc-trading/svlangserver
+cd Desktop/personal/arv
+vi ~/.config/nvim/init.lua
+vi rtl/arv.sv
+brew install --cask visual-studio-code
+code
+brew install universal-ctags
+ctags --version
+cd .local
+mkdir bin
+which ctags
+brew install cmake
+cd Desktop/personal
+git clone https://github.com/MikePopoloski/slang.git\
+
+cd slang
+cmake -B build
+cmake --build build -j
+cd build
+cd bin
+file slang
+file -a slang
+file --help
+mv ./* ~/.local/bin
+rm -rf slang
+verible-verilog-format --help
+verible-verilog-format --helpfull
+brew install --cask discord
+brew install --cask spotify
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+/opt/homebrew/Cellar/gtkwave/HEAD-0bc00e1_3/bin/gtkwave ; exit;
+brew tap randomplum/homebrew-gtkwave
+brew install randomplum/homebrew-gtkwave/gtkwave
+brew install --HEAD randomplum/homebrew-gtkwave/gtkwave
+gtkwave
+./sim/fifo_tb
+cd arv
+gtkwave fifo_tb.vcd
+dc
+cd .config/nvim/m
+vi .config/nvim/init.lua
+cd Desktop
+mkdir upc
+cd upc
+cd ..
+./sim/obj_dir/Vfifo_tb
+clear && ./sim/obj_dir/Vfifo_tb
+vi 
+ls --help
+man ls
+ls -o
+ls -hR
+ls -h
+ls -oh
+ls -ohR
+vi ~/.config/zsh/.zshrc
+vi nvim
+brew search rust
+brew search rustup
+brew install rustup
+echo 'export PATH="/opt/homebrew/opt/rustup/bin:$PATH"' >> /Users/aamocub/.config/zsh/.zshrc
+brew install luarocks
+brew update && brew upgrade
+brew install cargo
+brew install rust
+brew info rustup
+brew --prefix rustup
+brew --prefix
+echo $PATH
+rustup toolchain link system "$(brew --prefix rust)"
+rustup --help
+rustup toolchain
+rustup toolchain list
+c
+cd
+cd Desktop/
+cd personal/arv
+git st
+nvim .config/zsh/.zshrc
+vi .config/zsh/.zshrc
+source .config/zsh/.zshrc
+cd .config
+mkdir nvim
+cd nvim
+vi init.lua
+brew install --cask ghostty
+vi .zshenv
+l .rustup
+rm -rf .rustup
+l
+rm .lesshst
+cler
+clear
+ls
+ssh -X cpds1217@boada.ac.upc.edu
