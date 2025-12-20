@@ -19,6 +19,9 @@ vim.keymap.set({ "n" }, "<leader>lM", "<cmd>Mason<cr>")
 vim.lsp.enable({ "lua_ls" })
 
 -- SystemVerilog/Verilog LSP setup
+
+vim.lsp.enable("veridian")
+
 -- vim.lsp.config("verible", {
 -- 	cmd = {
 -- 		"verible-verilog-ls",
@@ -28,7 +31,8 @@ vim.lsp.enable({ "lua_ls" })
 -- 	},
 -- 	root_markers = { ".git", "verilator.f" },
 -- })
-vim.lsp.enable("verible")
+--
+-- vim.lsp.enable("verible")
 
 local function setkeymaps()
 	if package.loaded["fzf-lua"] then
@@ -52,6 +56,9 @@ local function setkeymaps()
 	vim.keymap.set({ "n" }, "K", function()
 		vim.lsp.buf.hover()
 	end, { desc = "LSP Hover" })
+	vim.keymap.set({ "n" }, "<leader>d", function()
+		vim.diagnostic.open_float()
+	end, { desc = "Open diagnostic" })
 end
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -59,7 +66,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
 		if client then
 			if client:supports_method("textDocument/completion") then
-				vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+				-- vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+				-- vim.keymap.set("i", "<c-space>", vim.lsp.completion.get, { desc = "Trigger autcompletion menu" })
 			end
 			if client:supports_method("textDocument/inlayHint") then
 				vim.keymap.set("n", "<leader>th", function()

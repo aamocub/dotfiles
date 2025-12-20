@@ -6,18 +6,21 @@ vim.opt.sidescrolloff = 8
 vim.opt.smoothscroll = true
 
 -- Text wrapping settings
-vim.opt.wrap = true
-vim.opt.breakindent = true
-vim.opt.textwidth = 120
-vim.opt.linebreak = true
+vim.opt.textwidth = 100
 
 -- Indentation settings
 vim.opt.tabstop = 8
 vim.opt.softtabstop = 8
 vim.opt.shiftwidth = 8
-vim.opt.smartindent = true
 vim.opt.autoindent = true
+vim.opt.smartindent = true
 vim.opt.smarttab = true
+vim.opt.expandtab = true
+
+-- Folding settings
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldlevelstart = 99
 
 -- Search settings
 vim.opt.hlsearch = false
@@ -28,10 +31,10 @@ vim.opt.wildignore:append({ ".DS_Store" })
 
 -- Visual settings
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 vim.opt.showmatch = true
 vim.opt.cmdheight = 2
-vim.opt.completeopt = "menu,menuone,noinsert,noselect,fuzzy,popup"
+vim.opt.completeopt = "menuone,noinsert,noselect,fuzzy,popup"
 vim.opt.pumheight = 10
 vim.opt.pumborder = "rounded"
 vim.opt.pumblend = 10
