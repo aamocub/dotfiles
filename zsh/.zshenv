@@ -5,6 +5,8 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 
 export ZDOTDIR=${ZDOTDIR:-$XDG_CONFIG_HOME/zsh}
 export HISTFILE=$XDG_CACHE_HOME/zsh/.zhistory
+export HISTSIZE=5000
+export SAVEHIST=5000
 export LESSHSTFILE="$XDG_STATE_HOME"/lesshst
 
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history

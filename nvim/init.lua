@@ -1,5 +1,6 @@
 require("plugins.gruber-darker")
 require("plugins.naysayer")
+require("plugins.notify")
 
 require("opts")
 

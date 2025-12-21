@@ -39,6 +39,7 @@ vim.opt.winblend = 10
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 vim.opt.lazyredraw = true
+vim.opt.termguicolors = true
 
 -- File handling settings
 vim.opt.swapfile = false
