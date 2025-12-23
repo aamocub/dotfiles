@@ -41,8 +41,8 @@ setopt prompt_subst
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats ' (git:%b) '
-export PS1='%n@%m:%~${vcs_info_msg_0_}# '
+zstyle ':vcs_info:*' formats '(git:%b):'
+export PS1='%n@%m:(%?):${vcs_info_msg_0_}%~# '
 export PATH="/opt/riscv32/bin:$PATH"
 
 if type brew &>/dev/null; then

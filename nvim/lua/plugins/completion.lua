@@ -10,7 +10,7 @@ require("blink-cmp").setup({
 		["<c-k>"] = { "select_prev", "fallback" },
 		["<tab>"] = { "snippet_forward", "fallback" },
 		["<s-tab>"] = { "snippet_backward", "fallback" },
-		["<c-space>"] = { "show_documentation", "hide_documentation", "fallback" },
+		["<C-space>"] = { "show_documentation", "hide_documentation", "fallback" },
 	},
 	signature = { enabled = true },
 	completion = {

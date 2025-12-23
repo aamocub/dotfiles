@@ -1,15 +1,19 @@
-require("plugins.gruber-darker")
-require("plugins.naysayer")
+if vim.g.vscode then
+	require("opts")
+else
+	require("opts")
+	require("plugins.gruber-darker")
+	require("plugins.naysayer")
 
-require("opts")
-require("autocmds")
+	require("autocmds")
 
-require("plugins.autopairs")
-require("plugins.fzf")
-require("plugins.treesitter")
-require("plugins.lsp")
-require("plugins.completion")
-require("plugins.conform")
-require("plugins.lint")
-require("plugins.git")
-require("diagnostics")
+	require("plugins.autopairs")
+	require("plugins.fzf")
+	require("plugins.treesitter")
+	require("plugins.lsp")
+	require("plugins.completion")
+	require("plugins.conform")
+	require("plugins.lint")
+	require("plugins.git")
+	require("diagnostics")
+end
