@@ -53,6 +53,10 @@
       "rev": "c4f67bf85b01a57e3c130352c0a0e453ab8cd5b9",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "nvim-notify": {
+      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
+      "src": "https://github.com/rcarriga/nvim-notify"
+    },
     "nvim-snippets": {
       "rev": "56b4052f71220144689caaa2e5b66222ba5661eb",
       "src": "https://github.com/garymjr/nvim-snippets"

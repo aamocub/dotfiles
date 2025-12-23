@@ -4,7 +4,7 @@ else
 	require("opts")
 	require("plugins.gruber-darker")
 	require("plugins.naysayer")
-
+	require("plugins.notify")
 	require("autocmds")
 
 	require("plugins.autopairs")

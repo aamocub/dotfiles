@@ -16,7 +16,16 @@ require("mason").setup({
 vim.keymap.set({ "n" }, "<leader>lM", "<cmd>Mason<cr>")
 
 -- Lua LSP setup
-vim.lsp.enable({ "lua_ls" })
+vim.lsp.enable("lua_ls")
+vim.lsp.config("verible", {
+	cmd = {
+		"verible-verilog-ls",
+		"--indentation_spaces=4",
+		"--column_limit=120",
+		"--rules=+line-length=length:120,-no-tabs",
+	},
+})
+vim.lsp.enable("verible")
 
 -- SystemVerilog/Verilog LSP setup
 
