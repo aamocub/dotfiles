@@ -1,4 +1,6 @@
 .zsh_sessions
+zsh/.zsh_history
+zsh/.zhistory
 
 *zsh_history*
 *.zsh_history*
