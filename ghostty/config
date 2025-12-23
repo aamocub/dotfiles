@@ -17,10 +17,12 @@
 
 font-family = Comic Code
 font-size = 14
+
 window-padding-x = 2
 
 alpha-blending = native
 
+# shell-integration = zsh
 shell-integration-features = ssh-env,no-cursor
 
 window-height = 32
@@ -37,6 +39,8 @@ mouse-hide-while-typing = true
 
 keybind = super+j=previous_tab
 keybind = super+k=next_tab
+keybind = ctrl+n=new_tab
+keybind = ctrl+w=close_tab
 
 macos-auto-secure-input = true
 macos-secure-input-indication = true
