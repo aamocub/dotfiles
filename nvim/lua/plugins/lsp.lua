@@ -15,33 +15,11 @@ require("mason").setup({
 
 vim.keymap.set({ "n" }, "<leader>lM", "<cmd>Mason<cr>")
 
--- Lua LSP setup
+-- LSP setup
 vim.lsp.enable("lua_ls")
-vim.lsp.config("verible", {
-	cmd = {
-		"verible-verilog-ls",
-		"--indentation_spaces=4",
-		"--column_limit=120",
-		"--rules=+line-length=length:120,-no-tabs",
-	},
-})
-vim.lsp.enable("verible")
-
--- SystemVerilog/Verilog LSP setup
-
-vim.lsp.enable("veridian")
-
--- vim.lsp.config("verible", {
--- 	cmd = {
--- 		"verible-verilog-ls",
--- 		"--column_limit=120",
--- 		"--indentation_spaces=4",
--- 		"--rules=+line-length=length:120,-parameter-name-style,+port-name-suffix",
--- 	},
--- 	root_markers = { ".git", "verilator.f" },
--- })
---
 -- vim.lsp.enable("verible")
+-- vim.lsp.enable("veridian")
+vim.lsp.enable("slang-server")
 
 local function setkeymaps()
 	if package.loaded["fzf-lua"] then

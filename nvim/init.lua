@@ -2,7 +2,7 @@ if vim.g.vscode then
 	require("opts")
 else
 	require("opts")
-	require("plugins.gruber-darker")
+	-- require("plugins.gruber-darker")
 	require("plugins.naysayer")
 	require("plugins.notify")
 	require("autocmds")

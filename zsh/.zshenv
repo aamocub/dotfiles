@@ -20,7 +20,15 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export PATH="$PATH":"$CARGO_HOME"/bin
 
+# GnuPG config
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+
+# RISC-V Development tools (GCC toolchain)
 export RISCV=/opt/riscv32
+export PATH=$RISCV/bin:$PATH
+# Verilator development
+export VERILATOR_MYINSTALL=/opt/verilator
+export PATH=$VERILATOR_MYINSTALL/bin:$PATH
 
 export EDITOR="$(which nvim)"
 

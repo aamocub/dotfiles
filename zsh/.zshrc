@@ -51,3 +51,8 @@ if type brew &>/dev/null; then
 	export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 	export PATH="/Users/aamocub/Desktop/personal/verilator/bin:$PATH"
 fi
+
+## GnuPG setup
+mkdir -p $GNUPGHOME
+chmod 700 $GNUPGHOME
+find $GNUPGHOME -type f -exec chmod 600 {} +
