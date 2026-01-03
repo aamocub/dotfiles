@@ -6,7 +6,9 @@ vim.opt.sidescrolloff = 8
 vim.opt.smoothscroll = true
 
 -- Text wrapping settings
-vim.opt.textwidth = 100
+vim.opt.textwidth = 99
+
+-- Format options
 
 -- Indentation settings
 vim.opt.tabstop = 8
