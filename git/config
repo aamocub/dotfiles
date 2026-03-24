@@ -3,7 +3,8 @@
 
 [user]
 	name = Alfonso Amorós Cubells
-	email = aamocub@gmail.com
+	email = aamocub@pm.me
+	signingkey = 22D15BFA91356C4B58A0F7C97B909E5CB07D25EE
 [alias]
 	unstage = reset HEAD --
 	co = checkout
@@ -23,3 +24,7 @@
 
 [format]
 	signOff = true
+[commit]
+	gpgsign = true
+[tap]
+	gpgSign = true

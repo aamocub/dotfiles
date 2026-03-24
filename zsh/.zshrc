@@ -52,7 +52,18 @@ if type brew &>/dev/null; then
 	export PATH="/Users/aamocub/Desktop/personal/verilator/bin:$PATH"
 fi
 
+# Tailscale setup
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 ## GnuPG setup
 mkdir -p $GNUPGHOME
 chmod 700 $GNUPGHOME
 find $GNUPGHOME -type f -exec chmod 600 {} +
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/aamocub/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
